@@ -44,13 +44,12 @@ nav svg {
     display: none;
 }
 
-
 @media (max-width: 1000px) {
     :root {
-        --bar-width: 60px;
+        --bar-width: 50px;
         --bar-height: 8px;
         --hamburger-gap: 6px;
-        --foreground: #333;
+        --foreground: rgb(100, 100, 100);
         --background: white;
         --hamburger-margin: 8px;
         --animation-timing: 200ms ease-in-out;
@@ -122,6 +121,13 @@ nav svg {
 
     }
 
+    nav {
+        flex-direction: column;
+        justify-self: flex-start;
+        position: absolute;
+        margin: 0;
+    }
+
     nav>ul {
         transition: translate var(--animation-timing);
         flex-direction: column;
@@ -131,18 +137,23 @@ nav svg {
         padding: 30px 30px;
     }
 
-    nav {
-        flex-direction: column;
-        justify-self: flex-start;
-        position: absolute;
-        margin: 0;
+
+    nav svg {
+        width: 0px;
+        height: 0px;
     }
+
+    nav span {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 500;
+        text-decoration: none;
+        color: #9C9C9C;
+        padding: 0.5em;
+        font-size: 1.5vw;
+    }
+
 
     .hamburger-menu:has(input:checked)+ul {
         display: flex;
-    }
-
-    nav a {
-        font-size: larger;
     }
 }

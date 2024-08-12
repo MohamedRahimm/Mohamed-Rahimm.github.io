@@ -1,9 +1,26 @@
+import { useEffect } from "react";
 import "./navbar.css";
 export default function Navbar() {
+  useEffect(() => {
+    const elements = document.querySelectorAll("span");
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1000) {
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].innerText = "";
+        }
+      } else {
+        const links = ["GitHub", "LeetCode", "Handshake"];
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].innerText = links[i];
+        }
+      }
+    });
+  });
   return (
     <nav>
       <label className="hamburger-menu">
-        <input type="checkbox"></input>
+        <input type="checkbox">
+        </input>
       </label>
       <ul>
         <li>
@@ -16,6 +33,7 @@ export default function Navbar() {
           <a href="/">Contact</a>
         </li>
         <li>
+          <span></span>
           <a href="https://github.com/MohamedRahimm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +48,7 @@ export default function Navbar() {
           </a>
         </li>
         <li>
+          <span></span>
           <a href="https://leetcode.com/u/Mohameddddd/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +73,7 @@ export default function Navbar() {
           </a>
         </li>
         <li>
+          <span></span>
           <a href="https://app.joinhandshake.com/profiles/49444866">
             <svg
               xmlns="http://www.w3.org/2000/svg"
