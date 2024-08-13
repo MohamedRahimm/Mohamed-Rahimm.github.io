@@ -2,20 +2,27 @@ import { useEffect } from "react";
 import "./navbar.css";
 export default function Navbar() {
   useEffect(() => {
-    const elements = document.querySelectorAll("span");
-    window.addEventListener("resize", () => {
+    const elements = document.querySelectorAll("ul > li > span");
+
+    const updateText = () => {
       if (window.innerWidth >= 1000) {
-        for (let i = 0; i < elements.length; i++) {
-          elements[i].innerText = "";
-        }
+        elements.forEach((element) => {
+          (element as HTMLElement).innerText = "";
+        });
       } else {
         const links = ["GitHub", "LeetCode", "Handshake"];
-        for (let i = 0; i < elements.length; i++) {
-          elements[i].innerText = links[i];
-        }
+        elements.forEach((element, index) => {
+          (element as HTMLElement).innerText = links[index];
+        });
       }
-    });
-  });
+    };
+    updateText();
+    window.addEventListener("resize", updateText);
+    return () => {
+      window.removeEventListener("resize", updateText);
+    };
+  }, []);
+
   return (
     <nav>
       <label className="hamburger-menu">

@@ -23,7 +23,7 @@ nav a {
     text-decoration: none;
     color: #9C9C9C;
     padding: 0.5em;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 
 }
 
@@ -46,9 +46,9 @@ nav svg {
 
 @media (max-width: 1000px) {
     :root {
-        --bar-width: 50px;
-        --bar-height: 8px;
-        --hamburger-gap: 6px;
+        --bar-width: 6vw;
+        --bar-height: 1vh;
+        --hamburger-gap: 1vh;
         --foreground: rgb(100, 100, 100);
         --background: white;
         --hamburger-margin: 8px;
@@ -124,8 +124,16 @@ nav svg {
     nav {
         flex-direction: column;
         justify-self: flex-start;
-        position: absolute;
         margin: 0;
+        height: 100%;
+        display: block;
+        z-index: 2;
+    }
+
+    #intro,
+    nav {
+        grid-row-start: 1;
+        grid-column-start: 1;
     }
 
     nav>ul {
@@ -143,13 +151,17 @@ nav svg {
         height: 0px;
     }
 
-    nav span {
+    nav span,
+    nav a {
         font-family: "IBM Plex Mono", monospace;
         font-weight: 500;
         text-decoration: none;
         color: #9C9C9C;
-        padding: 0.5em;
-        font-size: 1.5vw;
+        font-size: 1.5rem;
+    }
+
+    nav li {
+        margin: 10% 0;
     }
 
 
