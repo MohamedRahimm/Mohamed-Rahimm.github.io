@@ -31,13 +31,25 @@ export default function Navbar() {
       </label>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="/portfolio/">Home</a>
         </li>
         <li>
-          <a href="/">Recent Work</a>
+          <a
+            href="/portfolio/"
+            onClick={(e) => {
+              e.preventDefault();
+              const projects = document.querySelector(".project-container");
+              projects?.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+          >
+            Recent Work
+          </a>
         </li>
         <li>
-          <a href="/">Contact</a>
+          <a href="mailto:mo319281@live.seminolestate.edu">Contact</a>
         </li>
         <li>
           <span></span>

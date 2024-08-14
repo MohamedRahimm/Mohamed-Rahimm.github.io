@@ -17,7 +17,19 @@ export default function App() {
             solutions, whether it's through algorithms or dynamic web
             applications.
           </p>
-          <button id="portfolio-button">View My Portfolio {">"}</button>
+          <button
+            id="portfolio-button"
+            onClick={(e) => {
+              e.preventDefault();
+              const projects = document.querySelector(".project-container");
+              projects?.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+          >
+            View My Portfolio {">"}
+          </button>
         </div>
         <img
           src={pfpURL}

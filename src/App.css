@@ -16,20 +16,20 @@ h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   color: #FEFEFF;
-  font-size: 2.5rem;
+  font-size: 280%;
 }
 
 #sub-intro-text {
   font-family: "IBM Plex Mono", monospace;
   color: #9c9c9c;
   margin-bottom: 40px;
-  font-size: 1.2rem;
+  font-size: 130%;
 }
 
 #portfolio-button {
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 120%;
   color: #FEFEFF;
   background-color: #3F8E00;
   border-width: 2px;
@@ -40,16 +40,22 @@ h1 {
   aspect-ratio: 4/1;
 }
 
+#portfolio-button:hover {
+  transform: translateY(-2px);
+}
+
 #profile-picture {
-  width: 60%;
-  aspect-ratio: 3.7/4.8;
+  width: 50%;
   border-radius: 20%;
   border-style: solid;
   border-width: 4px;
   border-color: #F2EFE5;
+  justify-self: center;
+  align-self: center;
 }
 
 main {
+  margin-top: 5%;
   display: grid;
 }
 
@@ -66,7 +72,6 @@ main {
 
 #scriptal-demo {
   width: 85%;
-  aspect-ratio: 4/2.9;
   border-style: solid;
   border-color: red;
   border-radius: 1%;
@@ -74,16 +79,7 @@ main {
 
 #nn-demo {
   width: 85%;
-  aspect-ratio: 4/3;
   border-style: solid;
   border-color: red;
   border-radius: 1%;
-}
-
-@media (max-width:1000px) {
-
-  #scriptal-demo,
-  #nn-demo {
-    width: 100%;
-  }
 }

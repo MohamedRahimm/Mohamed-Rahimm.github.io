@@ -27,17 +27,16 @@ nav a {
 
 }
 
-nav svg {
-    width: 2.5vw;
+nav a:hover {
+    color: azure;
 }
 
-:root {
-    --bar-width: 60px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
-    --foreground: #333;
-    --background: white;
-    --anmiation-timing: 200ms ease-in-out;
+nav li:hover {
+    transform: translateY(-2px);
+}
+
+nav svg {
+    width: 2.5vw;
 }
 
 .hamburger-menu {
