@@ -2,10 +2,9 @@ import { useEffect } from "react";
 import "./navbar.css";
 export default function Navbar() {
   useEffect(() => {
-    const elements = document.querySelectorAll("ul > li > span");
-
+    const elements = document.querySelectorAll("ul > li > a > span");
     const updateText = () => {
-      if (window.innerWidth >= 1000) {
+      if (window.innerWidth >= 768) {
         elements.forEach((element) => {
           (element as HTMLElement).innerText = "";
         });
@@ -52,8 +51,8 @@ export default function Navbar() {
           <a href="mailto:mo319281@live.seminolestate.edu">Contact</a>
         </li>
         <li>
-          <span></span>
           <a href="https://github.com/MohamedRahimm">
+            <span></span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -67,8 +66,8 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <span></span>
           <a href="https://leetcode.com/u/Mohameddddd/">
+            <span></span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -92,8 +91,8 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <span></span>
           <a href="https://app.joinhandshake.com/profiles/49444866">
+            <span></span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 165 165"
