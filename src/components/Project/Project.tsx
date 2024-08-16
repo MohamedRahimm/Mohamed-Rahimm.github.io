@@ -1,6 +1,6 @@
 import { ReactSVG } from "react";
 import { pythonSVG, typescriptSVG } from "../../helpers/svgHelper";
-import "./project.css";
+import "./Project.css";
 interface ProjectProps {
   title: string;
   description: string;

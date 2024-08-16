@@ -1,14 +1,11 @@
 main {
-  margin-top: 100px;
   display: grid;
 }
 
 #projects-title {
   justify-self: center;
-  margin-bottom: 100px;
+  margin: 15vh auto;
 }
-
-
 
 :root {
   font-size: clamp(1rem, .9rem + .5vw, 1.3rem);

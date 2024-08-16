@@ -1,32 +1,27 @@
 nav {
-    width: fit-content;
-    height: fit-content;
     background-color: #1B1B1B;
-    display: flex;
-    justify-content: space-evenly;
     justify-self: center;
     border-radius: 0 0 10px 10px;
-    margin-bottom: 60px;
+    margin-bottom: 10vh;
 }
 
 nav>ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
-
+nav li {
+    padding: 0.5em;
+}
 
 nav a {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
     text-decoration: none;
     color: #9C9C9C;
-    padding: 0.5em;
     font-size: 1.5rem;
-
 }
 
 nav a:hover,
@@ -121,17 +116,11 @@ nav svg {
     #hamburger-menu input:checked {
         opacity: 0;
         width: 0;
-
     }
 
     nav {
-        justify-self: flex-start;
-        margin: 10%;
-        height: 100%;
-        display: block;
-        z-index: 2;
+        width: 100%;
     }
-
 
     nav>ul {
         transition: translate var(--animation-timing);
@@ -151,10 +140,6 @@ nav svg {
 
     nav span,
     nav a {
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: 500;
-        text-decoration: none;
-        color: #9C9C9C;
         font-size: 1.9rem;
     }
 
@@ -165,4 +150,11 @@ nav svg {
     nav:has(#hamburger-menu input:checked) {
         margin: 0;
     }
+
+    /* Hides other content when navbar is opened */
+    #root:has(#hamburger-menu input:checked)>header,
+    #root:has(#hamburger-menu input:checked)>main {
+        display: none;
+    }
+
 }
