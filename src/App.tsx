@@ -2,8 +2,9 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Project from "./components/project";
 export default function App() {
-  const pfpURL = new URL("./assets/me.jpeg", import.meta.url).href;
-  const scriptalURL = new URL("./assets/scriptal.png", import.meta.url).href;
+  const pfpURL = new URL("./assets/profile_pic.jpeg", import.meta.url).href;
+  const scriptalURL =
+    new URL("./assets/scriptal_demo.png", import.meta.url).href;
   const nnURL = new URL("./assets/nn_demo.png", import.meta.url).href;
 
   return (
@@ -14,9 +15,7 @@ export default function App() {
           <h1>Hello! I'm Mohamed Rahim 👋</h1>
           <p id="sub-intro-text">
             An aspiring software engineer with a passion for machine learning
-            and web development. I'm driven by the desire to create impactful
-            solutions, whether it's through algorithms or dynamic web
-            applications.
+            and web development.
           </p>
         </div>
 
@@ -46,6 +45,7 @@ export default function App() {
           description="Scriptal is a dynamic programming language inspired by JS and Python. Developed without external library dependencies, it features higher order functions, closures, and native functions and methods."
           language={
             <svg
+              style={{ backgroundColor: "#3178c6" }}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 512 512"
@@ -109,10 +109,67 @@ export default function App() {
               </defs>
             </svg>
           }
-          demo={<img src={nnURL} id="nn-demo"></img>}
+          demo={
+            <img src={nnURL} id="nn-demo">
+            </img>
+          }
           link="https://github.com/MohamedRahimm/ml-from-scratch"
         >
         </Project>
+        {
+          /* <Project
+          title="Sentiment Analysis 📊"
+          description="An LSTM sentiment analysis model using PyTorch on the IMDB movie dataset. Extensive data preprocessing was conducted to reduce training time and a custom BPE tokenizer was trained using Hugging Face to optimizing vocabulary size. "
+          language={
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 64 64"
+              fill="none"
+              preserveAspectRatio="xMidYMid meet"
+              style={{ transform: "scale(2)" }}
+            >
+              <path
+                d="M31.885 16c-8.124 0-7.617 3.523-7.617 3.523l.01 3.65h7.752v1.095H21.197S16 23.678 16 31.876c0 8.196 4.537 7.906 4.537 7.906h2.708v-3.804s-.146-4.537 4.465-4.537h7.688s4.32.07 4.32-4.175v-7.019S40.374 16 31.885 16zm-4.275 2.454c.771 0 1.395.624 1.395 1.395s-.624 1.395-1.395 1.395a1.393 1.393 0 0 1-1.395-1.395c0-.771.624-1.395 1.395-1.395z"
+                fill="url(#a)"
+              />
+              <path
+                d="M32.115 47.833c8.124 0 7.617-3.523 7.617-3.523l-.01-3.65H31.97v-1.095h10.832S48 40.155 48 31.958c0-8.197-4.537-7.906-4.537-7.906h-2.708v3.803s.146 4.537-4.465 4.537h-7.688s-4.32-.07-4.32 4.175v7.019s-.656 4.247 7.833 4.247zm4.275-2.454a1.393 1.393 0 0 1-1.395-1.395c0-.77.624-1.394 1.395-1.394s1.395.623 1.395 1.394c0 .772-.624 1.395-1.395 1.395z"
+                fill="url(#b)"
+              />
+              <defs>
+                <linearGradient
+                  id="a"
+                  x1="19.075"
+                  y1="18.782"
+                  x2="34.898"
+                  y2="34.658"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#387EB8" />
+                  <stop offset="1" stopColor="#366994" />
+                </linearGradient>
+                <linearGradient
+                  id="b"
+                  x1="28.809"
+                  y1="28.882"
+                  x2="45.803"
+                  y2="45.163"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#FFE052" />
+                  <stop offset="1" stopColor="#FFC331" />
+                </linearGradient>
+              </defs>
+            </svg>
+          }
+          demo={
+            <img src={nnURL} id="nn-demo">
+            </img>
+          }
+          link="https://github.com/MohamedRahimm/torch-ML"
+        >
+        </Project> */
+        }
       </main>
     </>
   );

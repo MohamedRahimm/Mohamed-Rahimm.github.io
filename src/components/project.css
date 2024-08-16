@@ -1,8 +1,9 @@
 .project-container {
     color: #fff;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-bottom: 30vh;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-bottom: 20vh;
+    row-gap: 5vh;
 }
 
 .project-text-container {
@@ -29,6 +30,7 @@
 .project-language svg {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .project-description {
@@ -38,14 +40,14 @@
     color: #FEFEFF;
     background-color: #1e1e1e;
     padding: 5% 5%;
-    aspect-ratio: 4/2;
+    aspect-ratio: 2/1;
 }
 
 .project-sourcecode {
     display: block;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: #e4bb66;
     border-style: solid;
@@ -57,9 +59,17 @@
 }
 
 .project-container img {
-    object-fit: cover;
-    border: solid red;
+    object-fit: fill;
+    border: solid red 1px;
     border-radius: 5%;
-    max-width: 350px;
+    max-width: 100%;
+    height: 100%;
     justify-self: center;
+    align-self: center;
+}
+
+@media (max-width:425px) {
+    .project-text-container {
+        margin: auto auto
+    }
 }

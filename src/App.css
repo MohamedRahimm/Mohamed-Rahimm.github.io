@@ -7,7 +7,8 @@
 }
 
 #intro-container {
-  align-self: center;
+  height: 100%;
+  align-content: center;
   margin: auto 10% 5vh;
 }
 
@@ -15,7 +16,7 @@ h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   color: #FEFEFF;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -23,7 +24,7 @@ h1 {
   font-family: "IBM Plex Mono", monospace;
   color: #9c9c9c;
   margin: 5% auto;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 #portfolio-button {
@@ -66,6 +67,12 @@ main {
 #projects-title {
   justify-self: center;
   margin-bottom: 100px;
+}
+
+@media (max-width:425px) {
+  #intro-container {
+    margin: auto auto 5vh
+  }
 }
 
 :root {

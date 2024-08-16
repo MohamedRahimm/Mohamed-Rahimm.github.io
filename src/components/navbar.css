@@ -46,7 +46,7 @@ nav svg {
 
 @media (max-width: 768px) {
     :root {
-        --bar-width: 6vw;
+        --bar-width: 3rem;
         --bar-height: 1vh;
         --hamburger-gap: 1vh;
         --foreground: rgb(100, 100, 100);
@@ -122,9 +122,8 @@ nav svg {
     }
 
     nav {
-
         justify-self: flex-start;
-        margin: 0;
+        margin: 10%;
         height: 100%;
         display: block;
         z-index: 2;
@@ -158,5 +157,9 @@ nav svg {
 
     .hamburger-menu:has(input:checked)+ul {
         display: flex;
+    }
+
+    nav:has(.hamburger-menu input:checked) {
+        margin: 0;
     }
 }

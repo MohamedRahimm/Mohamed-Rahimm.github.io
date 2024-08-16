@@ -4,7 +4,7 @@ export default function Navbar() {
   useEffect(() => {
     const elements = document.querySelectorAll("ul > li > a > span");
     const updateText = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth > 768) {
         elements.forEach((element) => {
           (element as HTMLElement).innerText = "";
         });
@@ -37,10 +37,10 @@ export default function Navbar() {
             href="/portfolio/"
             onClick={(e) => {
               e.preventDefault();
-              const projects = document.querySelector(".project-container");
+              const projects = document.querySelector("main");
               projects?.scrollIntoView({
                 behavior: "smooth",
-                block: "center",
+                block: "start",
               });
             }}
           >

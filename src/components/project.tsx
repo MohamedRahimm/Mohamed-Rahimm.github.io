@@ -20,6 +20,7 @@ export default function Project(props: ProjectProps) {
           <article className="project-description">{props.description}</article>
           <a className="project-sourcecode" href={props.link}>Source Code</a>
         </div>
+
         {props.demo}
       </div>
     </>
