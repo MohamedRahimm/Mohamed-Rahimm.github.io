@@ -1,5 +1,4 @@
 .project-container {
-    color: #fff;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin-bottom: 20vh;
@@ -7,7 +6,8 @@
 }
 
 .project-text-container {
-    justify-self: center;
+    font-family: "Raleway", sans-serif;
+    color: #FEFEFF;
     margin: auto 10%;
 }
 
@@ -15,29 +15,28 @@
     display: grid;
     background-color: #bf392e;
     grid-template-columns: 90% 10%;
-    height: min-content;
 }
 
 .project-title {
-    font-family: "Raleway", sans-serif;
     font-weight: 700;
-    color: #FEFEFF;
     font-size: 2rem;
+    text-align: center;
     align-self: center;
-    justify-self: center;
+    margin: 0;
 }
 
 .project-language svg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+}
+
+.project-description,
+.project-sourcecode {
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .project-description {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: #FEFEFF;
     background-color: #1e1e1e;
     padding: 5% 5%;
     aspect-ratio: 2/1;
@@ -45,9 +44,6 @@
 
 .project-sourcecode {
     display: block;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
     text-decoration: none;
     color: #e4bb66;
     border-style: solid;
@@ -58,14 +54,18 @@
     width: 50%;
 }
 
+.project-container>a {
+    justify-self: center;
+    align-self: center;
+}
+
 .project-container img {
     object-fit: fill;
     border: solid red 1px;
     border-radius: 5%;
     max-width: 100%;
     height: auto;
-    justify-self: center;
-    align-self: center;
+
 }
 
 @media (max-width:425px) {

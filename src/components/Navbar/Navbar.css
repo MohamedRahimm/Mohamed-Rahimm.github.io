@@ -17,6 +17,8 @@ nav>ul {
     padding: 0 10px;
 }
 
+
+
 nav a {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
@@ -37,10 +39,11 @@ nav li:hover {
 }
 
 nav svg {
-    width: 2.5vw;
+    max-width: 50px;
+    width: 100%;
 }
 
-.hamburger-menu {
+#hamburger-menu {
     display: none;
 }
 
@@ -56,7 +59,7 @@ nav svg {
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     }
 
-    .hamburger-menu {
+    #hamburger-menu {
         --x-width: calc(var(--hamburger-height) * 1.41421356237);
         display: flex;
         flex-direction: column;
@@ -69,21 +72,21 @@ nav svg {
         cursor: pointer;
     }
 
-    .hamburger-menu:has(input:checked) {
+    #hamburger-menu:has(input:checked) {
         --foreground: #9c9c9c;
         --background: #333;
     }
 
-    .hamburger-menu:has(input:focus-visible)::before,
-    .hamburger-menu:has(input:focus-visible)::after,
-    .hamburger-menu input:focus-visible {
+    #hamburger-menu:has(input:focus-visible)::before,
+    #hamburger-menu:has(input:focus-visible)::after,
+    #hamburger-menu input:focus-visible {
         border: 1px solid var(--background);
         box-shadow: 0 0 0 1px var(--foreground);
     }
 
-    .hamburger-menu::before,
-    .hamburger-menu::after,
-    .hamburger-menu input {
+    #hamburger-menu::before,
+    #hamburger-menu::after,
+    #hamburger-menu input {
         content: "";
         width: var(--bar-width);
         height: var(--bar-height);
@@ -95,7 +98,7 @@ nav svg {
             background-color var(--animation-timing);
     }
 
-    .hamburger-menu input {
+    #hamburger-menu input {
         appearance: none;
         padding: 0;
         margin: 0;
@@ -103,19 +106,19 @@ nav svg {
         pointer-events: none;
     }
 
-    .hamburger-menu:has(input:checked)::before {
+    #hamburger-menu:has(input:checked)::before {
         rotate: 45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / -2);
     }
 
-    .hamburger-menu:has(input:checked)::after {
+    #hamburger-menu:has(input:checked)::after {
         rotate: -45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / 2);
     }
 
-    .hamburger-menu input:checked {
+    #hamburger-menu input:checked {
         opacity: 0;
         width: 0;
 
@@ -155,11 +158,11 @@ nav svg {
         font-size: 1.9rem;
     }
 
-    .hamburger-menu:has(input:checked)+ul {
+    #hamburger-menu:has(input:checked)+ul {
         display: flex;
     }
 
-    nav:has(.hamburger-menu input:checked) {
+    nav:has(#hamburger-menu input:checked) {
         margin: 0;
     }
 }

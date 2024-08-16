@@ -1,27 +1,35 @@
+import { ReactSVG } from "react";
+import { pythonSVG, typescriptSVG } from "../../helpers/svgHelper";
 import "./project.css";
 interface ProjectProps {
   title: string;
   description: string;
-  language: React.ReactElement;
-  demo: React.ReactElement;
+  language: string;
+  demo: string;
   link: string;
 }
+const map: Record<string, React.ReactElement<ReactSVG>> = {
+  "ts": typescriptSVG,
+  "py": pythonSVG,
+};
 export default function Project(props: ProjectProps) {
   return (
     <>
       <div className="project-container">
         <div className="project-text-container">
           <header className="project-header">
-            <span className="project-title">
+            <h2 className="project-title">
               {props.title}
-            </span>
-            <span className="project-language">{props.language}</span>
+            </h2>
+            <div className="project-language">{map[props.language]}</div>
           </header>
           <article className="project-description">{props.description}</article>
           <a className="project-sourcecode" href={props.link}>Source Code</a>
         </div>
-
-        {props.demo}
+        <a href={props.link}>
+          <img src={props.demo}>
+          </img>
+        </a>
       </div>
     </>
   );
