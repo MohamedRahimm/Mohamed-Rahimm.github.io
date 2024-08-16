@@ -6,7 +6,7 @@ export default function App() {
   const scriptalURL =
     new URL("./assets/scriptal_demo.png", import.meta.url).href;
   const nnURL = new URL("./assets/nn_demo.png", import.meta.url).href;
-
+  const lstmURL = new URL("./assets/lstm_demo.png", import.meta.url).href;
   return (
     <>
       <Navbar></Navbar>
@@ -116,8 +116,7 @@ export default function App() {
           link="https://github.com/MohamedRahimm/ml-from-scratch"
         >
         </Project>
-        {
-          /* <Project
+        <Project
           title="Sentiment Analysis 📊"
           description="An LSTM sentiment analysis model using PyTorch on the IMDB movie dataset. Extensive data preprocessing was conducted to reduce training time and a custom BPE tokenizer was trained using Hugging Face to optimizing vocabulary size. "
           language={
@@ -163,13 +162,12 @@ export default function App() {
             </svg>
           }
           demo={
-            <img src={nnURL} id="nn-demo">
+            <img src={lstmURL} id="nn-demo">
             </img>
           }
           link="https://github.com/MohamedRahimm/torch-ML"
         >
-        </Project> */
-        }
+        </Project>
       </main>
     </>
   );
