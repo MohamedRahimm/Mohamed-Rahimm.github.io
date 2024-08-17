@@ -38,7 +38,14 @@ export default function Navbar() {
         <li>
           <a
             href="/portfolio/"
-            onClick={(e) => scrollIntoProjects(e)}
+            onClick={(e) => {
+              e.preventDefault();
+              const hamburgerMenu = document.querySelector(
+                "input",
+              )!;
+              hamburgerMenu.checked = false;
+              scrollIntoProjects(e);
+            }}
           >
             Recent Work
           </a>

@@ -206,3 +206,17 @@ export const pythonSVG = (
     </g>
   </svg>
 );
+export const bodySVG = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 58"
+    fill="none"
+    width="100%"
+    height="100%"
+  >
+    <path
+      d="M-100 58C-100 58 218.416 36.3297 693.5 36.3297C1168.58 36.3297 1487 58 1487 58V-3.8147e-06H-100V58Z"
+      fill="#080909"
+    />
+  </svg>
+);

@@ -1,10 +1,13 @@
 main {
   display: grid;
+  margin-top: 15vh;
+  background: radial-gradient(rgb(8, 9, 9),
+      rgb(20, 20, 20));
 }
 
 #projects-title {
   justify-self: center;
-  margin: 15vh auto;
+  margin-bottom: 15vh;
 }
 
 :root {

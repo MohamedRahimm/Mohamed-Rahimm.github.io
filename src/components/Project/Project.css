@@ -54,6 +54,15 @@
     width: 50%;
 }
 
+.project-sourcecode:hover {
+    background-position: 100% 100%;
+    background-size: 200% 200%;
+    color: #F2EFE5;
+    background-image: linear-gradient(to top, #e4bb66 50%, transparent 50%);
+    transition: all 200ms linear
+}
+
+
 .project-container>a {
     justify-self: center;
     align-self: center;
@@ -61,7 +70,7 @@
 
 .project-container img {
     object-fit: fill;
-    border: solid red 1px;
+    border: solid #D21404 3px;
     border-radius: 5%;
     max-width: 100%;
     height: auto;

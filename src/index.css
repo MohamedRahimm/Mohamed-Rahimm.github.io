@@ -7,10 +7,10 @@ body,
 }
 
 #root {
-
     display: grid;
 }
 
 body {
     background-color: #080909;
+    overflow-x: hidden;
 }
