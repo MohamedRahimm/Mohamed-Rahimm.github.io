@@ -7,7 +7,7 @@ export default function Intro() {
       <div id="intro-container">
         <h1>Hello! I'm Mohamed Rahim 👋</h1>
         <p id="sub-intro-text">
-          An aspiring software engineer with a passion for machine learning and
+          A software engineer with a passion for machine learning and
           web development.
         </p>
       </div>

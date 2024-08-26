@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-bottom: 20vh;
-    row-gap: 5vh;
 }
 
 .project-text-container {
@@ -37,7 +36,7 @@
 }
 
 .project-description {
-    background-color: #1e1e1e;
+    background-color: #252525;
     padding: 5% 5%;
     aspect-ratio: 2/1;
 }
@@ -52,14 +51,13 @@
     text-align: center;
     padding: 2% 0;
     width: 50%;
+    border-radius: .25rem;
 }
 
 .project-sourcecode:hover {
-    background-position: 100% 100%;
-    background-size: 200% 200%;
     color: #F2EFE5;
-    background-image: linear-gradient(to top, #e4bb66 50%, transparent 50%);
-    transition: all 200ms linear
+    background-color: #e4bb66;
+    transition: all .15s ease-in-out;
 }
 
 
@@ -74,6 +72,7 @@
     border-radius: 5%;
     max-width: 100%;
     height: auto;
+    box-sizing: border-box;
 }
 
 @media (max-width:425px) {

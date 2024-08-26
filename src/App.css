@@ -1,15 +1,11 @@
 main {
   display: grid;
+  border-top: solid #e2e8f0 4px;
   margin-top: 15vh;
-  background: radial-gradient(rgb(8, 9, 9),
-      rgb(20, 20, 20));
+  background: #18181b;
 }
 
 #projects-title {
   justify-self: center;
-  margin-bottom: 15vh;
-}
-
-:root {
-  font-size: clamp(1rem, .9rem + .5vw, 1.3rem);
+  margin: 15vh 0;
 }

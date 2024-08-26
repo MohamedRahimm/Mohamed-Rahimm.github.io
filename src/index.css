@@ -11,6 +11,12 @@ body,
 }
 
 body {
-    background-color: #080909;
-    overflow-x: hidden;
+    background: #18181b;
+    background-size: 80px 80px;
+    background-image: linear-gradient(to right, color-mix(in srgb, #a78bfa 30%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, #a78bfa 30%, transparent) 1px, transparent 1px);
+    background-attachment: fixed;
+}
+
+:root {
+    font-size: clamp(1rem, .9rem + .5vw, 2rem);
 }

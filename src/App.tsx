@@ -2,7 +2,6 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Project from "./components/Project/Project";
 import Intro from "./components/Intro/Intro";
-import { bodySVG } from "./helpers/svgHelper";
 export default function App() {
   const scriptalURL =
     new URL("./assets/scriptal_demo.png", import.meta.url).href;
@@ -14,7 +13,6 @@ export default function App() {
       <Intro></Intro>
 
       <main>
-        {bodySVG}
         <h1 id="projects-title">Projects</h1>
         <Project
           title="Scriptal 📄"
