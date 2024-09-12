@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { githubSVG, handshakeSVG, leetcodeSVG } from "../../helpers/svgHelper";
+import { githubSVG, handshakeSVG, linkedinSVG } from "../../helpers/svgHelper";
 
 import "./Navbar.css";
 import { scrollIntoProjects } from "../../helpers/scrollHelper";
@@ -60,9 +60,9 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a href="https://leetcode.com/u/Mohameddddd/">
+          <a href="www.linkedin.com/in/mohamed-rahim-25240a328">
             <span></span>
-            {leetcodeSVG}
+            {linkedinSVG}
           </a>
         </li>
         <li>

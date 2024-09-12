@@ -5,7 +5,7 @@ interface ProjectProps {
   title: string;
   description: string;
   language: string;
-  demo: string;
+  demo: {img:string,link:string};
   link: string;
 }
 const map: Record<string, React.ReactElement<ReactSVG>> = {
@@ -26,8 +26,8 @@ export default function Project(props: ProjectProps) {
           <article className="project-description">{props.description}</article>
           <a className="project-sourcecode" href={props.link}>Source Code</a>
         </div>
-        <a href={props.link}>
-          <img src={props.demo}>
+        <a href={props.demo.link}>
+          <img src={props.demo.img}>
           </img>
         </a>
       </div>

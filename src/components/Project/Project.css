@@ -40,6 +40,7 @@
     background-color: #252525;
     padding: 5% 5%;
     aspect-ratio: 2/1;
+    border: 1px solid rgba(255, 255, 255, 0.51);
 }
 
 .project-sourcecode {

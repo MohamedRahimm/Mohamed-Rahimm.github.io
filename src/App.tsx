@@ -18,7 +18,7 @@ export default function App() {
           title="Scriptal 📄"
           description="Scriptal is a dynamic programming language inspired by JS and Python. Developed without external library dependencies, it features higher order functions, closures, and native functions and methods."
           language="ts"
-          demo={scriptalURL}
+          demo={{img:scriptalURL,link:"https://mohamedrahimm.github.io/Scriptal/"}}
           link="https://github.com/MohamedRahimm/Scriptal"
         >
         </Project>
@@ -26,7 +26,7 @@ export default function App() {
           title="Neural Network🧠"
           description="A Logistic Regression model using NumPy that predicts weight categories based on BMI data. It incorporates L2 regularization and dropout to prevent overfitting, while employing cross-validation and early stopping techniques to improve generalization performance."
           language="py"
-          demo={nnURL}
+          demo={{img:nnURL,link:nnURL}}
           link="https://github.com/MohamedRahimm/ml-from-scratch"
         >
         </Project>
@@ -34,7 +34,7 @@ export default function App() {
           title="Sentiment Analysis 📊"
           description="An LSTM sentiment analysis model using PyTorch on the IMDB movie dataset. Extensive data preprocessing was conducted to reduce training time and a custom BPE tokenizer was trained using Hugging Face to optimizing vocabulary size. "
           language="py"
-          demo={lstmURL}
+          demo={{img:lstmURL,link:lstmURL}}
           link="https://github.com/MohamedRahimm/torch-ML"
         >
         </Project>
