@@ -12,7 +12,7 @@ export default function Navbar() {
           (element as HTMLElement).innerText = "";
         });
       } else {
-        const links = ["GitHub", "LeetCode", "Handshake"];
+        const links = ["GitHub", "Linkedin", "Handshake"];
         elements.forEach((element, index) => {
           (element as HTMLElement).innerText = links[index];
         });
