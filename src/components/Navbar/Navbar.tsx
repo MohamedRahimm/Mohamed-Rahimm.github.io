@@ -60,7 +60,7 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a href="www.linkedin.com/in/mohamed-rahim-25240a328">
+          <a href="https://www.linkedin.com/in/mohamed-rahim-25240a328">
             <span></span>
             {linkedinSVG}
           </a>
