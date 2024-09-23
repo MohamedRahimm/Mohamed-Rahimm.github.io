@@ -1,11 +1,29 @@
 main {
-  display: grid;
-  border-top: solid #e2e8f0 4px;
   margin-top: 15vh;
-  background: #18181b;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  color: white;
+  background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+  background-image: radial-gradient(circle at bottom, color-mix(in srgb, #c6b3fc 0%, transparent) 73%, #a88bfc 279%),
+    radial-gradient(circle at top, color-mix(in srgb, #a78bfa 0%, transparent) 43%, #1d182b 100%),
+    linear-gradient(to right,
+      color-mix(in srgb, #a78bfa 30%, transparent) 1px, transparent 1px), linear-gradient(to bottom,
+      color-mix(in srgb, #a78bfa 30%, transparent) 1px, transparent 1px);
+
+}
+
+#projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  grid-auto-flow: row;
+
 }
 
 #projects-title {
-  justify-self: center;
   margin: 15vh 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
 }

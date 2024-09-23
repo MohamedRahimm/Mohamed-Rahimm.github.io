@@ -5,7 +5,7 @@ export default function Intro() {
   return (
     <header id="intro">
       <div id="intro-container">
-        <h1>Hello! I'm Mohamed Rahim 👋</h1>
+        <h1 id="intro-text">Hello! I'm Mohamed Rahim 👋</h1>
         <p id="sub-intro-text">
           A software engineer with a passion for machine learning and
           web development.

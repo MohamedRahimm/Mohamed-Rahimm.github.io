@@ -1,36 +1,37 @@
-import { ReactSVG } from "react";
-import { pythonSVG, typescriptSVG } from "../../helpers/svgHelper";
+import {websiteSVG,sourceSVG} from "../../helpers/svgHelper"
 import "./Project.css";
 interface ProjectProps {
   title: string;
   description: string;
-  language: string;
-  demo: {img:string,link:string};
-  link: string;
+  date: string;
+  imgURL: string;
+  websiteURL: string;
+  sourceCodeURL: string
 }
-const map: Record<string, React.ReactElement<ReactSVG>> = {
-  "ts": typescriptSVG,
-  "py": pythonSVG,
-};
 export default function Project(props: ProjectProps) {
   return (
-    <>
-      <div className="project-container">
-        <div className="project-text-container">
-          <header className="project-header">
-            <h2 className="project-title">
-              {props.title}
-            </h2>
-            <div className="project-language">{map[props.language]}</div>
-          </header>
-          <article className="project-description">{props.description}</article>
-          <a className="project-sourcecode" href={props.link}>Source Code</a>
-        </div>
-        <a href={props.demo.link}>
-          <img src={props.demo.img}>
-          </img>
+    <div className="project-container">
+    <a href={props.websiteURL}>
+      <img className="project-image" src={props.imgURL}></img>
+    </a>
+    <div className="project-text-container">
+    <h1 className="project-title">{props.title}</h1>
+    <h2 className="project-date">{props.date}</h2>
+    <section className="project-description">
+     {props.description} 
+    </section>
+    <div className="project-links">
+      <a className="project-website" href={props.websiteURL}>
+        {websiteSVG}
+        Website
         </a>
-      </div>
-    </>
+      <a className="project-code" href={props.sourceCodeURL}>
+        {sourceSVG}
+        Source 
+        </a>
+    </div>
+
+    </div>
+  </div>
   );
 }
