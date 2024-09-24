@@ -1,0 +1,33 @@
+.meteor::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, #a78bfa, transparent);
+}
+
+.meteor {
+    position: absolute;
+    height: 0.125rem;
+    width: 0.125rem;
+    background-color: #c7b6f8;
+    animation: meteor 5s linear infinite;
+}
+
+@keyframes meteor {
+    0% {
+        transform: rotate(215deg) translateX(0);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(215deg) translateX(-80cqh);
+        opacity: 0;
+    }
+}

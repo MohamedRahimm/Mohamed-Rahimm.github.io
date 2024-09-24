@@ -10,18 +10,20 @@ export default function Intro() {
           A software engineer with a passion for machine learning and
           web development.
         </p>
-      </div>
-      <img
-        src={pfpURL}
-        alt="A picture of Mohamed Rahim smiling with his dog"
-        id="profile-picture"
-      />
       <button
         id="portfolio-button"
         onClick={(e) => scrollIntoProjects(e)}
       >
         View My Portfolio {">"}
       </button>
+      </div>
+      <div id="pfp-container">
+      <img
+        src={pfpURL}
+        alt="A picture of Mohamed Rahim"
+        id="profile-picture"
+      />
+      </div>
     </header>
   );
 }

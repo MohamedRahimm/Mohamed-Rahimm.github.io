@@ -1,0 +1,17 @@
+.star {
+    position: absolute;
+    height: 2.5px;
+    width: 2.5px;
+    background-color: white;
+    animation: star 5s linear infinite;
+    z-index: 0;
+    border-radius: 50%;
+    opacity: 0.8;
+    display: block;
+}
+
+@keyframes star {
+    50% {
+        opacity: 0;
+    }
+}

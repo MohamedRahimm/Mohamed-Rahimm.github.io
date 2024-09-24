@@ -2,13 +2,23 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Project from "./components/Project/Project";
 import Intro from "./components/Intro/Intro";
+import { Meteor } from "./components/Meteor/Meteor";
+import { Star } from "./components/Star/Star";
 export default function App() {
-
   return (
     <>
+    <section id="home">
       <Navbar></Navbar>
       <Intro></Intro>
-     <main>
+     <div className="meteors">
+         <Meteor number={30}></Meteor>
+      </div> 
+      
+      <div className="stars">
+      <Star number={100}></Star>
+      </div>
+    </section>
+     <main >
         <h1 id="projects-title">Projects</h1>
         <div id="projects-wrapper">
         <Project

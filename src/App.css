@@ -1,5 +1,4 @@
 main {
-  margin-top: 15vh;
   padding-left: 5vw;
   padding-right: 5vw;
   color: white;
@@ -12,12 +11,30 @@ main {
 
 }
 
+
+#home {
+  display: grid;
+  background: linear-gradient(to bottom, #060010 0%, #060010 6%, #090016 11%, #070016 20%, #0a0121 48%, #0a0127 55%, #0a0129 57%, #0c012b 62%, #0e0131 68%, #0d012f 100%);
+  padding-bottom: 15vh;
+  position: relative;
+  container-type: inline-size;
+  overflow-x: clip;
+}
+
+
+
 #projects-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 30px;
   grid-auto-flow: row;
 
+}
+
+@media (max-width:600px) {
+  #projects-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 #projects-title {
