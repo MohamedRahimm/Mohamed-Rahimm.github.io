@@ -1,4 +1,9 @@
-main {
+.hidden {
+  display: none !important;
+}
+
+#projects {
+
   padding-left: 5vw;
   padding-right: 5vw;
   color: white;
@@ -8,9 +13,19 @@ main {
     linear-gradient(to right,
       color-mix(in srgb, #a78bfa 30%, transparent) 1px, transparent 1px), linear-gradient(to bottom,
       color-mix(in srgb, #a78bfa 30%, transparent) 1px, transparent 1px);
-
+  animation: fade 1.5s ease;
+  background-attachment: fixed;
 }
 
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 #home {
   display: grid;
@@ -19,6 +34,7 @@ main {
   position: relative;
   container-type: inline-size;
   overflow-x: clip;
+  background-attachment: fixed;
 }
 
 

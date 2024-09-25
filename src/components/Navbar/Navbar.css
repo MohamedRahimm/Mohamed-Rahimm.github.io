@@ -4,6 +4,7 @@ nav {
     border-radius: 10px;
     margin-bottom: 10vh;
     border: 2px solid color-mix(in srgb, #a78bfa 40%, transparent);
+    height: fit-content;
 }
 
 nav>ul {
@@ -22,13 +23,13 @@ nav a {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
     text-decoration: none;
-    color: #9C9C9C;
+    color: azure;
     font-size: 1.5rem;
 }
 
 nav a:hover,
 nav span:hover {
-    color: azure;
+    color: #641da6;
 }
 
 nav li:hover {
@@ -40,6 +41,40 @@ nav svg {
     width: 100%;
 }
 
+#contact:hover~span {
+    display: block;
+    position: absolute;
+    color: azure;
+    width: fit-content;
+    text-wrap: balance;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 10px;
+    background: color-mix(in srgb, #27272a 80%, transparent);
+    z-index: 9999;
+    left: -50%;
+    top: 100%;
+    margin-inline: auto;
+}
+
+#contact:hover~span::before {
+    content: "";
+    display: block;
+    width: 5%;
+    height: 10px;
+    background: color-mix(in srgb, #27272a 80%, transparent);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin-inline: auto;
+    position: relative;
+    transform: translate(-200%, -250%);
+}
+
+#contact~span {
+    display: none;
+}
+
 #hamburger-menu {
     display: none;
 }
@@ -49,15 +84,14 @@ nav svg {
         --bar-width: 3rem;
         --bar-height: 1vh;
         --hamburger-gap: 1vh;
-        --foreground: rgb(100, 100, 100);
-        --background: white;
+        --foreground: #fdfdfde6;
         --hamburger-margin: 8px;
         --animation-timing: 200ms ease-in-out;
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     }
 
     #hamburger-menu {
-        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+        --x-width: calc(var(--hamburger-height) * 1.41);
         display: flex;
         flex-direction: column;
         gap: var(--hamburger-gap);
@@ -69,15 +103,11 @@ nav svg {
         cursor: pointer;
     }
 
-    #hamburger-menu:has(input:checked) {
-        --foreground: #9c9c9c;
-        --background: #333;
-    }
+
 
     #hamburger-menu:has(input:focus-visible)::before,
     #hamburger-menu:has(input:focus-visible)::after,
     #hamburger-menu input:focus-visible {
-        border: 1px solid var(--background);
         box-shadow: 0 0 0 1px var(--foreground);
     }
 
@@ -154,10 +184,9 @@ nav svg {
         margin: 0;
     }
 
-    /* Hides other content when navbar is opened */
-    #root:has(#hamburger-menu input:checked)>header,
-    #root:has(#hamburger-menu input:checked)>main {
+    /* Hides other content when navbar is opened and prevents edge cases compared to js*/
+    #root:has(#hamburger-menu input:checked)>#home>#intro,
+    #root:has(#hamburger-menu input:checked)>#projects {
         display: none;
     }
-
 }

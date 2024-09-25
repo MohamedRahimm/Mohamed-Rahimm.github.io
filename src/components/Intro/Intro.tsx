@@ -12,7 +12,15 @@ export default function Intro() {
         </p>
       <button
         id="portfolio-button"
-        onClick={(e) => scrollIntoProjects(e)}
+          onClick={(e)=> {
+          const rootElemChildren = document.getElementById("root")?.children
+          if(rootElemChildren){
+          for(const elem of rootElemChildren){
+            elem.classList.remove("hidden")
+          }
+          }
+          scrollIntoProjects(e);
+        }}
       >
         View My Portfolio {">"}
       </button>

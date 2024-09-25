@@ -18,7 +18,7 @@ export default function App() {
       <Star number={100}></Star>
       </div>
     </section>
-     <main >
+     <main className="hidden" id="projects">
         <h1 id="projects-title">Projects</h1>
         <div id="projects-wrapper">
         <Project
