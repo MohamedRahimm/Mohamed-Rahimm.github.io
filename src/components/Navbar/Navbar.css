@@ -17,6 +17,7 @@ nav>ul {
 
 nav li {
     padding: 0.5em;
+    position: relative;
 }
 
 nav a {
@@ -182,6 +183,13 @@ nav svg {
 
     nav:has(#hamburger-menu input:checked) {
         margin: 0;
+    }
+
+    #contact:hover~span::before {
+        position: absolute;
+        transform: none;
+        top: -13%;
+        left: 50%;
     }
 
     /* Hides other content when navbar is opened and prevents edge cases compared to js*/
